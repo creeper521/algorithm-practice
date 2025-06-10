@@ -9,19 +9,19 @@ class ListNode {
 }
 
 public class t29 {
-    public ListNode removeNthFromEnd(ListNode head, int n) {
-        if(head.next == null)return null;
-        ListNode left = head, right = head;
-        while(n != 0){
-            right = right.next;
-            n--;
-        }
-        if(right == null)return head.next;
-        while(right.next != null){
-            left = left.next;
-            right = right.next;
-        }
-        left.next = left.next.next;
-        return head;
-    }
+//    public ListNode removeNthFromEnd(ListNode head, int n) {
+//        if(head.next == null)return null;
+//        ListNode left = head, right = head;
+//        while(n != 0){
+//            right = right.next;
+//            n--;
+//        }
+//        if(right == null)return head.next;
+//        while(right.next != null){
+//            left = left.next;
+//            right = right.next;
+//        }
+//        left.next = left.next.next;
+//        return head;
+//    }
 }
