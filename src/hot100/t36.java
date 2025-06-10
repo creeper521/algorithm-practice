@@ -16,20 +16,20 @@ import java.util.*;
 //}
 
 public class t36 {
-    public List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> ans = new ArrayList<>();
-        Deque<TreeNode> deque = new LinkedList<>();
-        while(root != null || !deque.isEmpty()){
-            while(root != null){
-                deque.push(root);
-                root = root.left;
-            }
-            root = deque.pop();
-            ans.add(root.val);
-            root = root.right;
-        }
-        return ans;
-    }
+//    public List<Integer> inorderTraversal(TreeNode root) {
+//        List<Integer> ans = new ArrayList<>();
+//        Deque<TreeNode> deque = new LinkedList<>();
+//        while(root != null || !deque.isEmpty()){
+//            while(root != null){
+//                deque.push(root);
+//                root = root.left;
+//            }
+//            root = deque.pop();
+//            ans.add(root.val);
+//            root = root.right;
+//        }
+//        return ans;
+//    }
     //递归
 //    public List<Integer> inorderTraversal(TreeNode root) {
 //        List<Integer> ans = new ArrayList<>();
