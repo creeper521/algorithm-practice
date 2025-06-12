@@ -3,7 +3,6 @@ package hot100;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.HashMap;
-import java.util.LinkedList;
 
 public class t52 {
     int[] dx = new int[]{-1, 0, 1, 0};
