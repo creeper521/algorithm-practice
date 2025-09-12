@@ -26,5 +26,5 @@ public class t43 {
         return isValidBST(root.left, left, root.val) && isValidBST(root.right, root.val, right);
     }
 
- 
+
 }
