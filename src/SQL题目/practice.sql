@@ -23,3 +23,26 @@ select a1.machine_id as machine_id, round(avg(a2.timestamp - a1.timestamp), 3)
    and a1.process_id = a2.process_id
    and a1.activity_type = 'start' and a2.activity_type = 'end'
    group by a1.machine_id;
+--第十一题
+select name, bonus from Employee left join Bonus on Employee.empid = Bonus.empid where bonus < 1000 or bonus is null;
+--第十二题
+select s.student_id, s.student_name, sub.subject_name, IFNULL(grouped.attended_exams, 0) as attended_exams
+from Students s
+cross join subjects sub
+left join(
+    select student_id, subject_name, count(*) as attended_exams
+    from Examinations
+    group by student_id, subject_name
+)grouped
+on s.student_id = grouped.student_id and sub.subject_name = grouped.subject_name
+order by s.student_id, sub.subject_name;
+--第十三题
+select Name
+from(
+    select Manager.Name as Name , count(Report.Id)as cnt
+    from Employee as Manager join  Employee as Report
+    on Manager.Id = Report.ManagerId
+    group by Manager.Id
+)as t
+where cnt >= 5
+--第十四题
